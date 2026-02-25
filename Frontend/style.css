@@ -286,16 +286,85 @@ body {
 }
 
 .person-img {
-    height: 200px;      /* reduce size */
-    width: auto;        /* keep proportions */
+    height: 215px;      /* reduce size */
+    width: auto;   
     object-fit: contain;
     display: block;
     margin: 0 auto;
 
 }
 
+/* Chatbot */
+/* Floating Chat Button */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  z-index: 1100;
+}
 
-/* FOOTER #1F4E79 */ 
+/* Chat Window */
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.chat-header {
+  background: #2d6cdf;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.chat-body {
+  padding: 10px;
+  overflow-y: auto;
+  height: 300px;
+  background: #f8f9fa;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.bot-message {
+  background: #e9f2ff;
+}
+
+.user-message {
+  background: #2d6cdf;
+  color: white;
+  text-align: right;
+}
+
+.chat-options button {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.chat-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* FOOTER (#1F4E79) */ 
 .site-footer {
     background: #697579;
     color: #ffffff;
@@ -327,4 +396,46 @@ body {
     font-size: 13px;
     opacity: 0.8;
 }
+
+.footer-divider {
+    border-color: rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.credits-section {
+    margin-top: 10px;
+}
+
+.credits-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.credit-item {
+    margin-bottom: 10px;
+}
+
+.credit-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.credit-item small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.credits-row {
+    gap: 40px; 
+}
+
+
 
