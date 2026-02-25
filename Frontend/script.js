@@ -1,5 +1,5 @@
 // const BASE_URL = "http://localhost:8000";
-// const BASE_URL = "https://your-url.up.railway.app";
+const BASE_URL = "https://maranda-multivoiced-vern.ngrok-free.dev";
 
 if (
     window.location.pathname.includes("dashboard.html") ||
