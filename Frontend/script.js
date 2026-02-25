@@ -12,6 +12,8 @@ if (
     }
 }
 
+
+
 function goToTest() {
     window.location.href = "login.html";
 }
@@ -227,7 +229,7 @@ async function goNextStep() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify({
                 name: name,
@@ -256,11 +258,11 @@ function startScreening() {
 async function submitTest(score) {
 
     try {
-        const response = await fetch(`${BASE_URL}/tests/submit`, {
+        const response = await fetch(`${BASE_URL}/test/submit`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify({
                 score: score
@@ -277,6 +279,8 @@ async function submitTest(score) {
         alert("Server error.");
     }
 }
+
+
 
 // REPORT
 // window.onload = function() {
