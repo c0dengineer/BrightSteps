@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BrightSteps | ASD Screening Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            
+                <img src="image/logo.png" class="logo-img me-2">
+                
+            <span class="brand-text">BrightSteps</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Items -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link" href="#" onclick="goToTest()">Test</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link" href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item" id="userArea">
+                    <a href="login.html" class="btn login-btn">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container-fluid px-5">
+        <div class="row align-items-center min-vh-75">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6 text-lg-start text-center hero-text">
+                <h1 class="hero-title">
+                    Early detection <br>
+                    makes a <span class="highlight-text1">lifetime</span><br><span class="highlight-text2">of difference</span>.
+                </h1>
+
+                <p class="lead mt-4">
+                    A gentle and parent-friendly autism screening tool designed 
+                    to help you understand your child's development.
+                </p>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary btn-lg me-3 px-4 py-2" onclick="goToTest()">
+                        Start Screening
+                    </button>
+
+                    <button class="btn btn-outline-secondary btn-lg px-4 py-2" onclick="scrollToWhy()">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <img src="https://autismawarenesscentre.com/wp-content/uploads/bigstock-Kids-Playing-Block-Toys-In-Pla-350958596.jpg" alt="Child Playing" class="hero-image img-fluid">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Content on Scrolling -->
+ <!-- Why Choose Our Screening Tool? -->
+ <section id="why" class="why-section">
+    <div class="container text-center">
+
+        <h2 class="why-title">Why Choose Our Screening Tool?</h2>
+        <p class="why-subtitle">Designed with care, backed by research.</p>
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <img src="image/family.png" alt = "Friendly">
+                    </div>
+                    <h4>Parent-Friendly</h4>
+                    <p>Clear, compassionate questions designed for busy parents.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <img src="image/brain.png" alt = "Research">
+                    </div>
+                    <h4>Research-Based</h4>
+                    <p>Questions aligned with recognized screening criteria.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <img src="image/protection.png" alt = "Cofidential">
+                    </div>
+                    <h4>Confidential</h4>
+                    <p>Your information is private and secure.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <img src="image/quick.png" alt = "Quick">
+                    </div>
+                    <h4>Quick & Easy</h4>
+                    <p>Complete in 10–15 minutes at your own pace.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Does any of this feel familiar? -->
+<section class="awareness-section">
+    <div class="container text-center">
+
+        <h2 class="section-title">Does any of this feel familiar?</h2>
+        <p class="section-subtitle">
+            Many adults only begin to recognize these patterns later in life. 
+            What’s often overlooked is how difficult they can be to understand at first.
+        </p>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100>
+                    <div class="speech-bubble">
+                        “I wasn’t recognized as autistic growing up. It took years of burnout before things finally made sense.”
+                    </div>
+                    <img src="image/person1.png" class="person-img">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100>
+                    <div class="speech-bubble">
+                        “As a child, it looked like meltdowns. As an adult, it looks like exhaustion, overthinking, and trying too hard to fit in.”
+                    </div>
+                    <img src="image/person2.png" class="person-img">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100>
+                    <div class="speech-bubble">
+                        “As a child, it looked like meltdowns. As an adult, it looks like exhaustion, overthinking, and trying too hard to fit in.”
+                    </div>
+                    <img src="image/person3.png" class="person-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why this can be hard to figure out? -->
+<section class="awareness-section bg-light">
+    <div class="container text-center">
+
+        <h2 class="section-title">Why this can be hard to figure out?</h2>
+        <p class="section-subtitle">
+            There are several reasons autism can go unrecognized in adulthood.
+        </p>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100 style="background:#e7a8a8;">
+                    <div class="speech-bubble">
+                        “Autism often overlaps with ADHD, anxiety, trauma, or alexithymia — blurring the picture and making it easy to miss.”
+                    </div>
+                    <img src="image/person4.png" class="person-img">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100 style="background:#4caf7d;">
+                    <div class="speech-bubble">
+                        “Many adults don’t match childhood or media stereotypes — especially high maskers and women who appear social and successful.”
+                    </div>
+                    <img src="image/person5.png" class="person-img">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="bubble-card" w-100 style="background:#4aaed1;">
+                    <div class="speech-bubble">
+                        “Autism has no single look. Autistic adults are diverse in age, gender, culture, profession, and personality.”
+                    </div>
+                    <img src="image/person6.png" class="person-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- India Helplines -->
+            <div class="col-md-4 footer-col">
+                <h5>Indian Helplines</h5>
+                <p>📞 1800-103-0977 <br><small>(Autism India)</small></p>
+                <p>📞 +91-11-4054-0991 <br><small>(Action for Autism)</small></p>
+                <p>🌐 rehabcouncil.nic.in <br><small>(RCI Therapists)</small></p>
+            </div>
+
+            <!-- India Centers -->
+            <div class="col-md-4 footer-col">
+                <h5>Indian Treatment Centers</h5>
+                <p>🏥 Kokilaben Child Development Centre <br><small>Mumbai</small></p>
+                <p>• autism-india.org</p>
+                <p>• indiaautismcenter.org</p>
+            </div>
+
+            <!-- Global Helplines -->
+            <div class="col-md-4 footer-col">
+                <h5>Global Helplines</h5>
+                <p>🌍 USA: 1-888-288-4762</p>
+                <p>🌍 UK: 0808 800 4104</p>
+                <p>🌍 Australia: 1800 277 328</p>
+                <p>🌍 Canada: 1-866-684-4115</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom text-center mt-4">
+            <p>© 2026 BrightSteps. This tool is for educational purposes and not a medical diagnosis.</p>
+            <p>~Created By Developers <br>
+            Sneha Nadar (AIML)<br>Vishakha Talele (Backend)<br>Navya Roshni (Frontend)<br>Sania Musliar (Database)
+             </p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

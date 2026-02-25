@@ -1,0 +1,330 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    padding-top: 90px;
+}
+
+/* ANIMATIONS OF HERO SECTIONC*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* NAVBAR */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+    padding: 0 15px;
+}
+
+.navbar-nav .nav-item + .nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;        
+    width: 2px;            
+    background-color: #cbd5e1;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Allura', cursive;
+    color: #2c2c2c;
+}
+
+.custom-link {
+    margin: 0 10px;
+    color: #555 !important;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.custom-link:hover {
+    color: #2563eb !important;
+}
+
+.login-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+#userArea span {
+    font-size: 16px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(to right, #dbeafe, #f3e8ff);
+    padding: 40px 0 70px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    width: 300px;
+    height: 300px;
+    background: rgba(59,130,246,0.15);
+    top: -80px;
+    right: -80px;
+}
+
+.hero-section::after {
+    width: 200px;
+    height: 200px;
+    background: rgba(168,85,247,0.15);
+    bottom: -60px;
+    left: -60px;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.05;
+    color: #111827;
+    letter-spacing: -1px;
+}
+
+.highlight-text1 {
+    color: #186cf3;
+}
+
+.highlight-text2 {
+    background: linear-gradient(90deg, #3b82f6, #5d94ed );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInLeft 1s ease-out
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 550px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.hero-image {
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.08);
+    animation: fadeInRight 1.2s ease-out, floatImage 5s ease-in-out infinite;
+}
+
+/* CONTENT ON SCROLLING */
+.why-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #e5d9e6, #9ac5f5);
+}
+
+.why-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.why-subtitle {
+    font-size: 18px;
+    color: #334155;
+    margin-top: 10px;
+}
+
+.why-card {
+    background: linear-gradient(135deg, #e6eaf0, #f6f9fc);
+    padding: 100px 5px;
+    border-radius: 22px;
+    color: #1e3a8a;
+    font-size: 18px;
+    font-family:cursive;
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icon-box img {
+    width: 100px;
+    height: auto;
+}
+
+/*  */
+.awareness-section {
+    padding: 90px 0;
+    background: #e6f0f6;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #243c8f;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 15px auto 0;
+    font-size: 18px;
+    color: #334155;
+}
+
+.bubble-card {
+    background: #49b3d2;
+    border-radius: 18px;
+    padding: 60px;
+    height: 500px;           
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.speech-bubble {
+    background: white;
+    border-radius: 100px;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #243c8f;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.person-img {
+    height: 215px;      /* reduce size */
+    width: auto;        /* keep proportions */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+/* FOOTER #1F4E79 */ 
+.site-footer {
+    background: #697579;
+    color: #ffffff;
+    padding: 60px 0 30px;
+}
+
+.site-footer h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.site-footer p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.site-footer small {
+    opacity: 0.7;
+    font-size: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+

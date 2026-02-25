@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disclaimer | BrightSteps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<style>
+/* DISCLAIMER BOX */
+.screening-body {
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Back Button */
+.back-home {
+    text-decoration: none;
+    font-weight: 500;
+    color: #2563eb;
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    color: #1a46a5;
+    transform: translateX(-3px);
+}
+
+/* Brand Top */
+.brand-box{
+    text-align: right;
+    align-items: center;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Allura', cursive;
+}
+.brand-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.brand-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2937;
+    font-family: 'Allura', cursive;
+}
+
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.brain-icon {
+    font-size: 38px;
+    background: white;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.disclaimer-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.disclaimer-icon {
+    font-size: 32px;            
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff3cd;   
+    color: #d97706;             
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.disclaimer-box {
+    background: #f1ead7;
+    border: 1px solid #e6be1f;
+    padding: 45px;
+    border-radius: 20px;
+    max-width: 2000px;
+    width: 100%;
+    line-height: 1.8;
+}
+
+/* Title Row */
+.disclaimer.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Blue Button */
+.start-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #1d4ed8;
+}
+
+</style>
+<body class="screening-body">
+
+<div class="container py-5">
+
+    <div class="page-header">
+
+    <a href="childinfo.html" class="back-home">← Go Back</a>
+
+    <div class="brand-box">
+        <img src="image/logo.png" class="logo-img">
+        <span class="brand-text">BrightSteps</span>
+    </div>
+
+    <div class="d-flex align-items-center mb-4">
+        <div class="brain-icon me-3">🧠</div>
+        <div>
+            <h2 class="main-title mb-0">Screening Tool</h2>
+            <small class="text-muted">Step 2: Disclaimer</small>
+        </div>
+    </div>
+
+</div>
+    <!-- Centered Disclaimer -->
+    <div class="disclaimer-center">
+
+        <div class="disclaimer-box">
+
+            <div class="disclaimer-title">
+    <div class="disclaimer-icon">
+        ⚠
+    </div>
+    <h4 class="fw-bold mb-0">
+        Important Disclaimer for Parents
+    </h4>
+</div>
+
+            <p class="mt-3">
+                This screening tool is designed for educational and observational purposes only.
+                <strong>It does NOT provide a medical diagnosis of Autism Spectrum Disorder (ASD).</strong>
+            </p>
+
+            <p>
+                Dear Parent/Caregiver,<br>
+                We understand that reflecting on these areas can sometimes feel emotional or thought-provoking.
+                Please remember that this questionnaire is designed to better understand strengths and
+                areas where support may be helpful. There are no "right" or "wrong" answers. 
+                We appreciate your time, care, and effort in helping build a clearer and more supportive understanding.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Buttons -->
+    <div class="d-flex justify-content-between mt-4">
+       
+        <a href="childinfo.html" >
+            <!-- ← Go Back -->
+        </a>
+
+        <button onclick="startScreening()" class="btn start-btn px-4">
+            I Understand, Start Screening
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

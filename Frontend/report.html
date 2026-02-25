@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightSteps Screening Report</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background: linear-gradient(to bottom right,#eef2ff,#f8f9fc);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.top-brand{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-weight:600;
+    font-size:18px;
+    color:#4a6cf7;
+}
+
+/* Main Card */
+.report-card{
+    background:white;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* Title Box */
+.title-box{
+    background:#2563eb; /* Blue */
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:30px;
+    color:white; /* Makes text white */
+}
+
+.title-box h2{
+    font-weight:700;
+    margin:0;
+    color:white;
+}
+
+.big-icon{
+    font-size:36px;
+    color:white; /* Makes icon white */
+}
+
+/* Probability */
+.probability-box{
+    text-align:center;
+}
+
+.probability-value{
+    font-size:60px;
+    font-weight:800;
+}
+
+/* Brand */
+.top-brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Allura', cursive;
+    color: black;
+}
+
+.logo-img {
+    height: 35px;
+    width: auto;
+}
+
+/* MAIN CONTENT */
+.report-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+/* CHILD PROFILE */
+.child-profile-card {
+  width: 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.child-info-title{
+    font-weight:700;
+    margin-bottom:15px;
+    text-align: center;
+}
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 120px;       
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;   
+    display: block;
+    margin: 0 auto;     
+}
+
+.child-detail-box{
+    background:#ffffff;
+    padding:10px 15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    text-align:left; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.child-detail-box strong{
+    display:block;
+    font-size:13px;
+    color:#6c757d;
+}
+
+.child-detail-box span{
+    font-weight:600;
+}
+
+/* PROBABILITY */
+.probability-section {
+  text-align: center;
+  flex: 1;
+  align-self: center;
+}
+
+.probability {
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* RESULT SUMMARY */
+.result-summary-box {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.result-summary-box h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.right-main-box{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Section Boxes */
+.section-box-item{
+    background:#f8f9ff;
+    padding:12px 15px;
+    border-radius:10px;
+    margin-bottom:12px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.section-box-item strong{
+    font-size:14px;
+}
+
+.section-box-item span{
+    float:right;
+    font-weight:600;
+}
+
+/* Support Message */
+.support-message-box{
+    background:#f8f9ff;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    font-size:14px;
+    line-height:1.6;
+}
+
+.support-message-box ul{
+    padding-left:18px;
+    margin-top:8px;
+    margin-bottom:15px;
+}
+
+.support-message-box li{
+    margin-bottom:6px;
+}
+
+/* Dashboard Button */
+.btn-dashboard{
+    display:inline-block;
+    padding:10px 22px;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.btn-dashboard:hover{
+    background:#1e4fd8;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(37,99,235,0.25);
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-brand">
+  <img src="image/logo.png" class="logo-img">&nbsp;BrightSteps
+</div>
+
+<div class="container mt-5 pt-5">
+
+<div class="report-card">
+
+    <!-- Title -->
+    <div class="title-box">
+        <div class="big-icon">🗒️</div>
+        <h2>BrightSteps Screening Report</h2>
+    </div>
+
+    <div class="row">
+
+        <!-- Child Profile -->
+        <div class="col-md-4">
+    <div class="child-profile">
+
+        <h5 class="child-info-title">Child Information</h5>
+
+        <div class="profile-image">
+            <img src="image/profile.png" alt="Child Profile">
+        </div>
+
+        <div class="child-detail-box">
+            <strong>Child Name</strong>
+            <span id="childName">Arjun</span>
+        </div>
+
+        <div class="child-detail-box">
+            <strong>DOB</strong>
+            <span id="childDOB">12-06-2022</span>
+        </div>
+
+        <div class="child-detail-box">
+            <strong>No. of Screenings</strong>
+            <span id="screenCount">1</span>
+        </div>
+
+    </div>
+</div>
+
+        <!-- Probability + Summary -->
+        <div class="col-md-8">
+           <div class="right-main-box">
+
+            <div class="probability-box">
+                <div id="probabilityValue" class="probability-value">--%</div>
+                <p>Estimated Autism Probability</p>
+            </div>
+
+            <div class="summary-box">
+                <h4 class="summary-title">Result Summary</h4>
+                <div id="sectionBreakdown"></div>
+                <div id="zoneMessage" class="zone-message"></div>
+                <div class="support-message-box">
+    <p><strong>Please don't panic</strong> — you're already taking the most important step by noticing early.</p>
+
+    <p>Many children showing these signs thrive beautifully with proper support.</p>
+
+    <p><strong>Immediate recommended actions:</strong></p>
+    <ul>
+        <li>Contact your pediatrician TODAY for comprehensive developmental assessment</li>
+        <li>Speech Therapy Evaluation - Essential for communication development</li>
+        <li>Occupational Therapy - Addresses sensory processing and motor skills</li>
+        <li>Behavioral Assessment - Early intervention yields best outcomes</li>
+    </ul>
+
+    <p>You're not alone — thousands of parents walk this path successfully. Early action creates beautiful outcomes. 
+      This screening suggests monitoring. A qualified healthcare professional provides comprehensive evaluation. 
+      Many children with these early signs blossom wonderfully with the right support!</p>
+</div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+    <a href="dashboard.html" class="btn-dashboard">
+        ← Back to Dashboard
+    </a>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+
+    try {
+
+        const response = await fetch(`${BASE_URL}/tests/latest`, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
+            }
+        });
+
+        if (!response.ok) {
+            alert("Failed to load report.");
+            return;
+        }
+
+        const data = await response.json();
+
+        let probability = data.probability;
+        let sectionScores = data.section_breakdown;
+
+        // Set Probability
+        document.getElementById("probabilityValue").innerText = probability + "%";
+
+        // Color Coding
+        let color;
+        if (probability <= 25) {
+            color = "green";
+        }
+        else if (probability <= 50) {
+            color = "#eab308";
+        }
+        else if (probability <= 75) {
+            color = "orange";
+        }
+        else {
+            color = "red";
+        }
+
+        document.getElementById("probabilityValue").style.color = color;
+
+        // Section Breakdown
+        let breakdownHTML = "";
+        for (let section in sectionScores) {
+            breakdownHTML += `<p><strong>${section}:</strong> ${sectionScores[section]}%</p>`;
+        }
+        document.getElementById("sectionBreakdown").innerHTML = breakdownHTML;
+
+        // ZONE MESSAGE LOGIC
+        let zoneText = "";
+
+        if (probability <= 25) {
+            zoneText = `
+            🟢 <strong>Low Risk (0-25%)</strong><br><br>
+            Your child shows strong developmental patterns typically seen in children.<br>
+            • No autism concerns flagged at this time.<br>
+            • Keep nurturing play, reading, and family time.<br>
+            • Trust your parental instincts.<br><br>
+            <em>This is an awareness tool only.</em>
+            `;
+        }
+        else if (probability <= 50) {
+            zoneText = `
+            🟡 <strong>Mild Risk (25-50%)</strong><br><br>
+            Some developmental patterns were observed that may benefit from gentle monitoring.<br>
+            • Minimal patterns sometimes appear in young children.<br>
+            • Continue pediatric visits and monitor gently.<br><br>
+            <em>This is an awareness tool only.</em>
+            `;
+        }
+        else if (probability <= 75) {
+            zoneText = `
+            🟠 <strong>Moderate Risk (50-75%)</strong><br><br>
+            Several developmental patterns commonly appear in children on the spectrum.<br><br>
+            Recommended:<br>
+            • Schedule developmental screening.<br>
+            • Consider speech & occupational consultation.<br>
+            • Monitor consistently.<br><br>
+            <em>This is an awareness tool only.</em>
+            `;
+        }
+        else {
+            zoneText = `
+            🔴 <strong>High Risk (75-100%)</strong><br><br>
+            Multiple significant developmental patterns identified.<br><br>
+            Immediate Actions:<br>
+            • Contact pediatrician today<br>
+            • Speech Therapy Evaluation<br>
+            • Occupational Therapy<br>
+            • Behavioral Assessment<br>
+            Early support creates beautiful outcomes.<br><br>
+            <em>This is an awareness tool only.</em>
+            `;
+        }
+
+        document.getElementById("zoneMessage").innerHTML = zoneText;
+
+    } catch (error) {
+        alert("Server error while loading report.");
+    }
+
+});
+</script>
+
+</body>
+</html>
