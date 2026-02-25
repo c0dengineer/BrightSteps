@@ -286,7 +286,7 @@ body {
 }
 
 .person-img {
-    height: 215px;      /* reduce size */
+    height: 200px;      /* reduce size */
     width: auto;        /* keep proportions */
     object-fit: contain;
     display: block;
